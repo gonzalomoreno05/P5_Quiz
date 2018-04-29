@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<title>Lista de Quizzes</title>
+<table>
+
+    <% var quizz = (JSON.parse(quizzes)) %>
+    <% console.log(quizz) %>
+    <% console.log(quizz[1].question) %>
+
+    <% for(i = 0;i < quizz.length;i++){ %>
+    <tr>
+        <td>
+            Pregunta número <%- i %> <%- quizz[i].question %>
+        </td>
+        <td>
+            Respuesta número <%- i %> <%- quizz[i].answer %>
+        </td>
+    </tr>
+    <% } %>
+</table>
+</body>
+
+<footer>
+    <a href="/">Home</a>
+    <a href="credits">Creditos</a>
+    <a href="quizzes">Quizzes</a>
+</footer>
+
+</html>
